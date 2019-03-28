@@ -1,0 +1,258 @@
+testo 350 协议
+连接350
+OUT    22 01 00 00  00                                             
+OUT    40                                                         
+IN     22 08 00 00  00                                            
+IN     00 00 00 00  2c cc aa 03                                   
+OUT    22 01 00 00  00                                           
+OUT    42                                                          
+IN     22 06 00 00  00                                        
+IN     00 00 00 00  5e 01  
+打开ViewValues窗口
+OUT    22 09 00 00  00                                        
+OUT    4f 5e 01 2c  cc aa 03 21  25                                
+IN     22 01 00 00  00                                           
+IN     01                                                          
+OUT    22 09 00 00  00                                            
+OUT    4f 5e 01 2c  cc aa 03 1c  25                                
+IN     22 01 00 00  00                                            
+IN     00      
+Single操作
+OUT    22 0a 00 00  00                                   
+OUT    4f 5e 01 2c  cc aa 03 1a  25 00                   
+IN     22 02 00 00  00                                   
+IN     0c 00                                             
+OUT    22 0a 00 00  00                                   
+OUT    4f 5e 01 2c  cc aa 03 1b  25 00                   
+IN     22 c4 00 00  00                                   
+IN     01 00 00 0c  01 01 09 00  00 84 00 00  00 82 00 fe 00 00 80 3f  01 30 09 02  00 84 00 00  00 8b 00 ff 00
+----------------MEAS TYPE-----------------------
+Set Flue Gas操作
+OUT    22 0a 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  a5 01 
+IN     22 04 00 00  00 
+IN     00 00 00 00  
+Get Flue Gas操作  
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  25 
+IN     22 01 00 00  00
+IN     01  
+
+Set Flue Gas + velocity操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 21  a5 05
+IN     22 04 00 00  00
+IN     00 00 00 00  
+Get Flue Gas + velocity操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  25
+IN     22 01 00 00  00
+IN     05 
+
+Set Flue Gas + dP操作
+OUT    22 0a 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  a5 06
+IN     22 04 00 00  00   
+IN     00 00 00 00 
+Get Flue Gas + dP操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  25
+IN     22 01 00 00  00 
+IN     06 
+
+Set Draft操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 21  a5 03 
+IN     22 04 00 00  00    
+IN     00 00 00 00
+Get Draft操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  25 
+IN     22 01 00 00  00 
+IN     03  
+
+Set dP操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 21  a5 02 
+IN     22 04 00 00  00
+IN     00 00 00 00 
+Get dP操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 21  25
+IN     22 01 00 00  00 
+IN     02  
+--------------MEAS ACTION----------------------------
+Set ZERO操作  
+OUT    22 09 00 00  00                                                                             
+OUT    4f 5e 01 2c  cc aa 03 1d  25                       
+IN     22 0e 00 00  00                                    
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00       
+OUT    22 17 00 00  00                                    
+OUT    4f 5e 01 2c  cc aa 03 1d  a5 00 00 00  00 1e 00 00  00 03 00 00  00 00 00                              
+IN     22 04 00 00  00                                    
+IN     00 00 00 00  
+Get ZERO操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25  
+IN     22 0e 00 00  00    
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+
+Set STOP操作
+OUT    22 09 00 00  00                                    
+OUT    4f 5e 01 2c  cc aa 03 1d  25                                                             
+IN     22 0e 00 00  00                                    
+IN     00 00 00 00  1e 00 00 00  02 00 00 00  00 00       
+OUT    22 17 00 00  00                                    
+OUT    4f 5e 01 2c  cc aa 03 1d  a5 00 00 00  00 1e 00 00 00 01 00 00  00 00 00                              
+IN     22 04 00 00  00                                    
+IN     00 00 00 00  
+Get STOP操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25
+IN     22 0e 00 00  00     
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+
+SET START操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25
+IN     22 0e 00 00  00   
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+OUT    22 17 00 00  00    
+OUT    4f 5e 01 2c  cc aa 03 1d  a5 00 00 00  00 1e 00 00 00 00 00 00  00 00 00 
+IN     22 04 00 00  00 
+IN     00 00 00 00 
+Get START操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1d  25 
+IN     22 0e 00 00  00    
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+
+Set RINSE操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25 
+IN     22 0e 00 00  00      
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+OUT    22 17 00 00  00  
+OUT    4f 5e 01 2c  cc aa 03 1d  a5 00 00 00  00 1e 00 00 00 04 00 00  00 00 00 
+IN     22 04 00 00  00 
+IN     00 00 00 00
+Get RINSE操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25 
+IN     22 0e 00 00  00 
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+
+Set None操作
+OUT    22 0a 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 ff 
+IN     22 04 00 00  00
+IN     00 00 00 00 
+Get None操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  25 
+IN     22 01 00 00  00  
+IN     04  
+Set Idle操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 21  a5 00
+IN     22 04 00 00  00      
+IN     00 00 00 00 
+Get Idle操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 21  25 
+IN     22 01 00 00  00   
+IN     00    
+Set CANCEL操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1d  25
+IN     22 0e 00 00  00
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00
+OUT    22 17 00 00  00   
+OUT    4f 5e 01 2c  cc aa 03 1d  a5 00 00 00  00 1e 00 00 00 02 00 00  00 00 00    
+IN     22 04 00 00  00
+IN     00 00 00 00   
+Get CANCEL操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1d  25
+IN     22 0e 00 00  00  
+IN     00 00 00 00  1e 00 00 00  01 00 00 00  00 00 
+-----------------APPLICATION---------------------------
+Set  Burner操作
+OUT    22 0a 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 00
+IN     22 04 00 00  00 
+IN     00 00 00 00
+Get  Burner操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  25
+IN     22 01 00 00  00  
+IN     00 
+
+Set  Turbine操作
+OUT    22 0a 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 01 
+IN     22 04 00 00  00 
+IN     00 00 00 00 
+Get  Turbine操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  25
+IN     22 01 00 00  00
+IN     01  
+
+Set  Engine 1操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 02
+IN     22 04 00 00  00
+IN     00 00 00 00
+Get  Engine 1操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  25
+IN     22 01 00 00  00 
+IN     02 
+
+Set  Engine 2操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 03 
+IN     22 04 00 00  00 
+IN     00 00 00 00 
+Get  Engine 2操作
+OUT    22 09 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  25
+IN     22 01 00 00  00
+IN     03      
+
+Set Customized操作
+OUT    22 0a 00 00  00 
+OUT    4f 5e 01 2c  cc aa 03 1c  a5 04
+IN     22 04 00 00  00 
+IN     00 00 00 00 
+Get Customized操作
+OUT    22 09 00 00  00
+OUT    4f 5e 01 2c  cc aa 03 1c  25 
+IN     22 01 00 00  00 
+IN     04  
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+ 
+
+     

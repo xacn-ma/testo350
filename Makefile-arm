@@ -1,0 +1,16 @@
+include ../env.mk
+
+TARGET = $(notdir $(CURDIR))
+CFLAGS += -I /usr/include/libusb-1.0
+LDFLAGS = -L /opt/myir-imx-fb/4.1.15-2.0.1/sysroots/cortexa7hf-neon-poky-linux-gnueabi/lib
+objs := $(patsubst %c, %o, $(shell ls *.c))
+
+all: $(objs) 
+	$(CC) -o testo350 $(objs) $(CFLAGS) $(LDFLAGS) -lusb-1.0
+main.o: main.c testo350.h
+	$(CC) -c main.c $(CFLAGS)
+testo350.o: testo350.c testo350.h
+	$(CC) -c testo350.c $(CFLAGS) $(LDFLAGS) -lusb-1.0
+
+clean:
+	rm -f testo350  *.o *~
